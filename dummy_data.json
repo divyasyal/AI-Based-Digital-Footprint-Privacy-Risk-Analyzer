@@ -1,0 +1,11 @@
+username,password,login_city,login_country,login_device,ip_type,photos_posted,photo_metadata_leak,location_leak,phone_logged,email_linked,documents_linked,risk_level
+divya01,pass123,Chandigarh,India,Android Phone,Mobile Network,128,EXIF+GPS,Yes,Yes,divya01@gmail.com,Aadhaar+PAN,High
+rahul02,rahul@321,Delhi,India,Laptop (Windows),WiFi,54,EXIF Only,Partial,Yes,rahul02@gmail.com,PAN,Moderate
+simran03,sim@2024,Mohali,India,iPhone,Mobile Network,210,EXIF+Device ID,Yes,Yes,simran03@icloud.com,Aadhaar+Debit Card,High
+ankit04,ankit#111,Jaipur,India,Android Phone,WiFi,32,None,No,No,ankit04@gmail.com,None,Low
+neha05,neha@789,Pune,India,Laptop (Mac),Office Network,76,Camera Model,Partial,Yes,neha05@gmail.com,PAN+Driving License,Moderate
+rohit06,rohit@555,Bangalore,India,Android Phone,Mobile Network,189,EXIF+GPS,Yes,Yes,rohit06@gmail.com,Aadhaar+Credit Card,High
+priya07,priya123,Amritsar,India,iPhone,WiFi,41,None,No,Yes,priya07@icloud.com,None,Low
+karan08,karan@999,Ludhiana,India,Laptop (Linux),College Network,95,EXIF Only,Partial,Yes,karan08@gmail.com,PAN,Moderate
+sonia09,sonia#456,Noida,India,Android Tablet,Mobile Network,167,EXIF+GPS,Yes,Yes,sonia09@gmail.com,Aadhaar,High
+amit10,amit@000,Gurgaon,India,Laptop (Windows),Corporate VPN,23,None,No,No,amit10@company.com,None,Low

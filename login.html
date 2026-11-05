@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | AI-Based Digital Footprint & Privacy Risk Analyzer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+/* PAGE LOAD */
+body{
+min-height:100vh;
+background:linear-gradient(to bottom,#f8fafc,#e2e8f0);
+color:#020617;
+animation:pageFade 1.2s ease;
+}
+
+@keyframes pageFade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 80px;
+background:#ffffff;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+nav h2{
+font-size:22px;
+color:#0f172a;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:#334155;
+font-size:15px;
+padding:6px 14px;
+border-radius:20px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#020617;
+color:#ffffff;
+}
+
+/* LOGIN SECTION */
+.login-section{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:90px 20px;
+}
+
+/* LOGIN CARD */
+.login-box{
+width:420px;
+padding:40px 35px;
+border-radius:24px;
+background:#ffffff;
+box-shadow:0 30px 70px rgba(0,0,0,0.1);
+animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(25px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* TITLE */
+.login-box h3{
+text-align:center;
+font-size:24px;
+margin-bottom:6px;
+color:#020617;
+}
+
+.login-box p{
+text-align:center;
+font-size:14px;
+color:#475569;
+margin-bottom:30px;
+}
+
+/* INPUTS */
+.input-field{
+margin-bottom:18px;
+}
+
+.input-field input{
+width:100%;
+padding:13px 16px;
+border-radius:16px;
+border:1px solid #cbd5e1;
+background:#f8fafc;
+outline:none;
+transition:0.3s;
+}
+
+.input-field input:focus{
+border-color:#020617;
+box-shadow:0 0 0 3px rgba(2,6,23,0.08);
+}
+
+/* BUTTON */
+.login-btn{
+width:100%;
+padding:13px;
+border:none;
+border-radius:18px;
+background:#020617;
+color:#ffffff;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.login-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ERROR */
+.error{
+margin-bottom:15px;
+color:#dc2626;
+font-size:14px;
+text-align:center;
+}
+
+/* NOTE */
+.note-box{
+margin-top:22px;
+padding:14px;
+border-radius:14px;
+background:#f1f5f9;
+border-left:4px solid #020617;
+font-size:13px;
+color:#334155;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Privacy Risk Analyzer</h2>
+<ul>
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+<li><a href="{{ url_for('login_page') }}">Login</a></li>
+</ul>
+</nav>
+
+<section class="login-section">
+<div class="login-box">
+
+<h3>User Login</h3>
+<p>AI-Based Digital Footprint & Privacy Risk Analyzer</p>
+
+<form method="POST" action="/login">
+
+<div class="input-field">
+<input type="text" name="username" placeholder="Username or Email" required>
+</div>
+
+<div class="input-field">
+<input type="password" name="password" placeholder="Password" required>
+</div>
+
+<button class="login-btn" type="submit">Login</button>
+
+</form>
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}s
+</section>
+
+</body>
+</html>
